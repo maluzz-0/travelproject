@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DestinyTravel-AdminLogin </title>
+  <link rel="stylesheet" href="{% static 'css/adminlogin.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<span style="margin-top: 120px;" href="#" class="button" id="toggle-login">Log in</span>
+
+<div id="login">
+  <div id="triangle"></div>
+  <h1>Admin Log in</h1>
+  <form method="post">
+    {% csrf_token %}
+    <input type="email" name="emailid" placeholder="__EmailId__"/>
+    <input type="password" name="password" placeholder="__Password__"/>
+    <input type="submit" value="Log in" />
+  </form>
+</div>
+<!-- partial -->
+<script src="{% static 'js/adminlogin.js' %}"></script>
+
+</body>
+</html>
